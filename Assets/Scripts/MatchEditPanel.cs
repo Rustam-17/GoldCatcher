@@ -20,7 +20,7 @@ public class MatchEditPanel : MonoBehaviour
     {
         _matchIdFileName = "MatchId";
         _matchId = PlayerPrefs.GetInt(_matchIdFileName);
-        Debug.Log(_matchId);
+
         CreateSavedMatches();
     }
 
