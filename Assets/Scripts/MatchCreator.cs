@@ -16,4 +16,13 @@ public class MatchCreator : MonoBehaviour
         _match = _matchObject.GetComponent<Match>();
         _match.SetParameters(id, parameters, editPanel, saver);
     }
+
+    public void Create(MatchParameters parameters)
+    {
+        _matchObject = Instantiate(_matchPrefab, _content);
+        _matchObject.transform.SetSiblingIndex(1);
+
+        _match = _matchObject.GetComponent<Match>();
+        _match.SetParameters(parameters);
+    }
 }
